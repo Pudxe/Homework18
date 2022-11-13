@@ -15,7 +15,7 @@ def create_app(config_obj):
     return app
 
 
-def register_extensions():
+def register_extensions(app):
     api = Api(app)
     db.init_app(app)
     api.add_namespace(movie_ns)
